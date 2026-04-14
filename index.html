@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Ke WU · Data Analyst / Business Analyst / Product Manager / AI Agent</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #1e2a3e;
+            background: #f8fafc;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        nav {
+            background: #0f172a;
+            color: white;
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        nav .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+        nav a:hover {
+            color: #38bdf8;
+        }
+        section {
+            scroll-margin-top: 80px;
+            background: white;
+            margin: 32px 0;
+            padding: 32px 28px;
+            border-radius: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+            color: #0f172a;
+        }
+        h2 {
+            font-size: 1.8rem;
+            border-left: 6px solid #3b82f6;
+            padding-left: 16px;
+            margin-bottom: 24px;
+            color: #0f172a;
+        }
+        h3 {
+            font-size: 1.3rem;
+            margin: 16px 0 8px;
+            color: #1e293b;
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 16px 0;
+        }
+        .tag {
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 16px;
+        }
+        .skill-cat {
+            flex: 1;
+            min-width: 200px;
+            background: #f1f5f9;
+            padding: 18px;
+            border-radius: 20px;
+        }
+        .skill-cat h3 {
+            margin-top: 0;
+            color: #0f172a;
+        }
+        .skill-cat ul {
+            padding-left: 20px;
+        }
+        .skill-cat li {
+            margin: 8px 0;
+        }
+        .project-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 28px;
+            transition: 0.2s;
+            background: #ffffff;
+        }
+        .project-card:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+        .project-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #0f172a;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+        .project-date {
+            font-weight: normal;
+            font-size: 0.9rem;
+            color: #475569;
+        }
+        .project-detail {
+            margin: 8px 0;
+        }
+        .btn {
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            padding: 8px 18px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-top: 8px;
+            margin-right: 12px;
+        }
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #3b82f6;
+            color: #3b82f6;
+        }
+        footer {
+            text-align: center;
+            padding: 32px;
+            color: #475569;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 24px;
+        }
+        @media (max-width: 700px) {
+            section {
+                padding: 20px;
+            }
+            .project-title {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="container">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<div class="container">
+    <!-- 1) Home / Headline -->
+    <section id="home">
+        <h1>👋 I'm Ke WU</h1>
+        <p style="font-size: 1.2rem; font-weight: 500; color: #2563eb;">
+            📌 Data Analyst · Junior Business Analyst · Product Manager · AI Agent Developer
+        </p>
+        <p>Driving product decisions with data & AI, building impactful business solutions.</p>
+        <div class="tags">
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Python</span>
+            <span class="tag">SQL</span>
+            <span class="tag">AI Agent</span>
+            <span class="tag">Product Thinking</span>
+        </div>
+    </section>
+
+    <!-- 2) About Me -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Ke Wu, a master's student passionate about data and artificial intelligence. I graduated from Central South University of Forestry and Technology with a B.E. in Computer Science and Technology, and I am currently pursuing an MSc in Artificial Intelligence and Business Analytics at Lingnan University, Hong Kong (expected Nov 2026, GPA 3.73/4).</p>
+        <p>I excel at extracting business insights from data using Python and SQL, and I have a strong interest in AI agent development and product strategy. I'm a fast learner who loves turning technical challenges into actionable product solutions.</p>
+        <ul style="margin-top: 12px; margin-left: 20px;">
+            <li>✅ Data-driven decision making: from business problem to analytics</li>
+            <li>✅ Machine learning applications: classification, regression, NLP & agent prototypes</li>
+            <li>✅ Product mindset: user research, requirement analysis, metric design</li>
+            <li>✅ Cross-functional collaboration with engineering and operations</li>
+        </ul>
+        <p><strong>🎓 Education</strong><br>
+        B.E. in Computer Science and Technology, Central South University of Forestry and Technology (2020.9 – 2024.7)<br>
+        MSc in Artificial Intelligence and Business Analytics, Lingnan University (2025.9 – 2026.11) · GPA 3.73/4
+        </p>
+    </section>
+
+    <!-- 3) Skills -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-cat">
+                <h3>💻 Technical Skills</h3>
+                <ul>
+                    <li>Python (pandas, numpy, scikit-learn)</li>
+                    <li>SQL (MySQL, PostgreSQL)</li>
+                    <li>Machine Learning (regression/classification/clustering/basic deep learning)</li>
+                    <li>Data Visualization (Matplotlib, Seaborn)</li>
+                    <li>Git / GitHub</li>
+                </ul>
+            </div>
+            <div class="skill-cat">
+                <h3>📊 Business Skills</h3>
+                <ul>
+                    <li>Problem framing & hypothesis-driven analysis</li>
+                    <li>A/B testing design</li>
+                    <li>Metrics building (DAU, LTV, conversion funnel)</li>
+                    <li>Data storytelling & reporting</li>
+                    <li>Product requirement analysis</li>
+                </ul>
+            </div>
+            <div class="skill-cat">
+                <h3>🛠️ Tools & IDEs</h3>
+                <ul>
+                    <li>VS Code, Cursor, PyCharm, Jupyter Notebook</li>
+                    <li>Excel / Google Sheets, Power BI</li>
+                    <li>Linux / Command line</li>
+                    <li>AI Tools: ChatGPT, GitHub Copilot, LangChain</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4) Projects -->
+    <section id="projects">
+        <h2>Projects</h2>
+        
+        <!-- Project 1: Gait Recognition with IMU Data -->
+        <div class="project-card">
+            <div class="project-title">
+                Gait Recognition with IMU Data & Explainable AI <span class="project-date">Feb 2026 – Apr 2026</span>
+            </div>
+            <p class="project-detail"><strong>📌 Problem:</strong> Academic research project aiming to recognize individuals and walking speeds using wearable inertial measurement unit (IMU) data. The challenge lies in high-dimensional time-series sensor data and the need for model interpretability.</p>
+            <p class="project-detail"><strong>📊 Data:</strong> Kuopio Gait Dataset (University of Eastern Finland) – IMU extracted data from 51 healthy participants walking at slow, comfortable, and fast speeds. Used 7 IMU sensors (pelvis, thighs, shanks, feet). Preprocessed and integrated raw signals to address missing values and synchronization issues.</p>
+            <p class="project-detail"><strong>⚙️ Approach:</strong> Extracted 522 hand-crafted features (time/frequency domain) and a 42-feature baseline. Applied Random Forest, CNN, and traditional ML models. Used SHAP and Gini impurity for variable importance analysis, sensor importance ranking, and optimal sensor combination. Compared full 522-dim features vs. dimensionality reduction (48-dim after feature selection) vs. end-to-end deep learning.</p>
+            <p class="project-detail"><strong>🏆 Outcome:</strong> Baseline (42 features) achieved 96% accuracy. Full 522 features, CNN, and reduced 48 features all achieved >99.5% accuracy. Identified optimal sensor set (pelvis + shanks) reducing hardware cost while maintaining high accuracy. Provided model interpretability insights for gait analysis under different speeds.</p>
+            <p class="project-detail"><strong>🤝 My contribution:</strong> Team leader. Designed all experiments, co-wrote code for preprocessing, feature extraction, model training (Random Forest, CNN), SHAP analysis, and sensor combination search. Reviewed and integrated team contributions.</p>
+            <p>🔗 <a href="https://github.com/WuKe29/GaitRecognition">Github link</a></p>
+        </div>
+
+                <!-- Project 2: Python for Data Science (Coursera) with EngageMetrics -->
+        <div class="project-card">
+            <div class="project-title">
+               EngageMetrics Case Study<span class="project-date">Oct 2025 – Nov 2025</span>
+            </div>
+            <p class="project-detail"><strong>📌 Problem:</strong> A fictitious analytics company, EngageMetrics, needs to optimize digital marketing strategies and workforce management using data-driven insights. The goal is to analyze user behavior, employee performance, and A/B test results to drive business decisions.</p>
+            <p class="project-detail"><strong>📊 Data:</strong> Four EngageMetrics datasets: User Interaction (clicks, time on site, device, demographics, account type, marketing channels), Employee Insights (demographics, performance, career progression), A/B Test User Engagement (user profiles and platform interactions), and Education Data (employee educational background). All datasets mimic real-world complexities (missing values, inconsistencies).</p>
+            <p class="project-detail"><strong>⚙️ Approach:</strong> Performed end-to-end data analysis using Python (pandas, numpy, matplotlib, seaborn, scikit-learn). Conducted data cleaning, exploration, statistical analysis (hypothesis testing, A/B test evaluation), and visualization. Applied version control with Git (branches, commits, merges) and hosted the project on GitHub with proper documentation (README, .gitignore).</p>
+            <p class="project-detail"><strong>🏆 Outcome:</strong> Delivered actionable insights: identified high-value user segments, evaluated marketing channel ROI, and provided recommendations to improve user engagement. For employee data, analyzed compensation trends and career progression patterns. The A/B test analysis showed a statistically significant lift in engagement (p < 0.05). All code and reports are available on GitHub, demonstrating reproducible analysis and version control best practices.</p>
+            <p class="project-detail"><strong>🤝 My contribution:</strong> Individual project – completed all stages: data acquisition, cleaning, EDA, statistical modeling, visualization, and Git/GitHub setup.</p>
+            <p>🔗 <a href="https://www.coursera.org/learn/python-for-data-science-and-version-control-with-github" target="_blank">Coursera link</a></p>
+        </div>
+
+        <p style="margin-top: 16px; font-style: italic;">✨ More projects (including group coursework) are available upon request or in my resume.</p>
+    </section>
+
+    <!-- 5) Resume / CV -->
+    <section id="resume">
+        <h2>Resume / CV</h2>
+        <p>📄 Download my resume (PDF):</p>
+        <a href="resume_en.pdf" class="btn" target="_blank">🇬🇧 English Resume</a>
+        <a href="resume_zh.pdf" class="btn btn-outline" target="_blank">🇨🇳 中文简历</a>
+            </section>
+
+    <!-- 6) Contact -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>📧 Email: <strong>polariswk@gmail.com</strong></p>
+        <p>🐙 GitHub: <a href="https://github.com/WuKe29" target="blank">github.com/WuKe29</a></p>
+        <p>🔗 LinkedIn: <a href="#">linkedin.com/in/ke-wu</a> (optional – add your real link)</p>
+        <p>📱 Phone: +86 19110361754 &nbsp;&nbsp; +852 84951754</p>
+    </section>
+</div>
+
+<footer>
+    © 2025 Ke WU · Data/AI Job-seeking Website | Last updated: April 2026
+</footer>
+</body>
+</html>
