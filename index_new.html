@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fitz Wu — AI Application &amp; Agent Engineering</title>
+<meta name="description" content="Fitz Wu (WU Ke) — MSc AI &amp; Business Analytics graduate building LLM agents, evaluation harnesses and applied AI systems.">
+<style>
+  :root{--bg:#0b0f16;--card:#131a24;--line:#22303f;--ink:#e8eef6;--muted:#93a4b8;--accent:#4da3ff;--accent2:#38e0a8}
+  *{box-sizing:border-box}html,body{margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+  .wrap{max-width:980px;margin:0 auto;padding:56px 24px 80px}
+  header{display:flex;flex-wrap:wrap;gap:16px;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:22px}
+  h1{font-size:34px;margin:0;letter-spacing:-.5px}
+  h1 span{font-size:15px;color:var(--muted);font-weight:500;margin-left:8px;letter-spacing:0}
+  .tag{color:var(--muted);font-size:15px;margin-top:6px}
+  .links{display:flex;gap:18px;flex-wrap:wrap;font-size:14px}
+  .links a{color:var(--muted)}.links a:hover{color:var(--accent)}
+  section{margin-top:48px}
+  h2{font-size:13px;text-transform:uppercase;letter-spacing:1.6px;color:var(--muted);margin:0 0 18px;font-weight:600}
+  p{margin:0 0 14px;color:#c7d3e1}
+  .proj{display:grid;gap:14px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;transition:border-color .15s ease,transform .15s ease}
+  .card:hover{border-color:#35506b;transform:translateY(-1px)}
+  .card h3{margin:0 0 4px;font-size:17px}
+  .card .meta{font-size:12.5px;color:var(--muted);letter-spacing:.3px;margin-bottom:10px}
+  .card ul{margin:8px 0 0;padding-left:18px;color:#c7d3e1;font-size:14.5px}
+  .card li{margin-bottom:5px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .chip{font-size:12.5px;color:#cfe0f2;background:#1a2534;border:1px solid var(--line);border-radius:999px;padding:5px 11px}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media (max-width:720px){.two{grid-template-columns:1fr}}
+  footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px}
+  .hl{color:var(--accent2)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Fitz Wu <span>(WU Ke / 吴珂)</span></h1>
+      <div class="tag">AI application &amp; agent engineering · product background</div>
+    </div>
+    <div class="links">
+      <a href="mailto:kewu2@ln.hk">Email</a>
+      <a href="https://github.com/WuKe29">GitHub</a>
+      <a href="https://www.linkedin.com/in/wu-ke-451a01404/">LinkedIn</a>
+      <a href="resume_en.pdf">Résumé</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>About</h2>
+    <p>I build LLM agents and then try to break them. MSc in Artificial Intelligence and Business Analytics (Distinction) at Lingnan University, Hong Kong; BEng in Computer Science from CSUFT.</p>
+    <p>Most recently I architected a multi-agent equity analysis system in Python — agents with scoped, read-only tool access, an execution path where agents can only propose and code executes, and a trajectory-level evaluation harness that asserts the dangerous paths are never taken. Before that, three months in SF Technology's AI Centre, owning requirements and user guides for a logistics-robotics feature and shipping a browser extension that replaced a manual data workflow.</p>
+    <p>I hold an active IANG visa and am based in Hong Kong / Shenzhen. Available immediately.</p>
+  </section>
+
+  <section>
+    <h2>Selected projects</h2>
+    <div class="proj">
+      <div class="card">
+        <h3>AI Trading Agent — multi-agent LLM system</h3>
+        <div class="meta">Python · LangGraph · LangChain · MCP · FastAPI · ~6,200 LOC · 2026</div>
+        <ul>
+          <li>Multi-agent pipeline: deterministic code scans the universe, specialist agents each receive only their own read-only tool set, a supervisor decides — <span class="hl">nothing in the pipeline can trade</span>.</li>
+          <li>Unified trust model: agents propose, code executes — 22 write-operation tools denied at build time, single-use confirmation tokens with expiry and replay protection, position and stop-loss limits enforced in code.</li>
+          <li>Caught a live failure in a repeated evaluation run: the chat agent placed a real sell order despite a prompt-level confirmation rule — traced it through the broker's order log, then removed all write tools from that agent.</li>
+          <li>Evaluation stack: 64 unit tests, 12 trajectory-level cases asserting which tools were actually called, decision replay scored against forward returns, plus run-level observability for latency, tokens and tool usage.</li>
+        </ul>
+        <div class="chips"><span class="chip">LangGraph</span><span class="chip">MCP</span><span class="chip">Human-in-the-loop</span><span class="chip">LLM evaluation</span><span class="chip">Observability</span></div>
+      </div>
+
+      <div class="card">
+        <h3>Gait-Based Person Identification</h3>
+        <div class="meta">Python · scikit-learn · PyTorch · SHAP · course paper, team lead · 2026</div>
+        <ul>
+          <li>Led a five-person study on the Kuopio IMU dataset: 51 subjects × 3 walking speeds, 47 after exclusions.</li>
+          <li>520 handcrafted features plus a 42-feature interpretable baseline, and a 1D-CNN on raw acceleration — both routes reach approximately 99% closed-set accuracy.</li>
+          <li>SHAP and Gini importance identified the pelvis as the most informative sensor and spectral features as the strongest discriminator; 48 features retained about 99% accuracy, turning model output into a sensor-selection recommendation.</li>
+        </ul>
+        <div class="chips"><span class="chip">Random forest</span><span class="chip">1D-CNN</span><span class="chip">SHAP</span><span class="chip">Feature selection</span><a class="chip" href="https://github.com/WuKe29/GaitRecognition">Repository</a></div>
+      </div>
+
+      <div class="card">
+        <h3>EngageMetrics — A/B test analysis</h3>
+        <div class="meta">Python · pandas · SciPy · course project · 2025</div>
+        <ul>
+          <li>Cleaned and joined multi-source data: employee insights, user interaction, A/B test results and education background.</li>
+          <li>Hypothesis tests by channel: Paid Ads click-through difference significant at p &lt; 0.05, other channels not significant; effect sizes visualised for a business audience.</li>
+          <li>Each experiment kept reproducible on its own Git branch.</li>
+        </ul>
+        <div class="chips"><span class="chip">A/B testing</span><span class="chip">Hypothesis testing</span><span class="chip">Data cleaning</span><a class="chip" href="https://github.com/WuKe29/engagemetrics-analysis">Repository</a></div>
+      </div>
+
+      <div class="card">
+        <h3>Gem Collector — deep reinforcement learning</h3>
+        <div class="meta">Python · PyTorch · DQN · course assignment · 2026</div>
+        <ul>
+          <li>Dueling + Double DQN with experience replay, success-biased replay buffer and five-stage curriculum learning, trained over 8,000 episodes.</li>
+          <li>Roughly 35% win rate on the hardest configuration (three enemies, 0.18 speed) versus under 10% without curriculum learning.</li>
+        </ul>
+        <div class="chips"><span class="chip">DQN</span><span class="chip">Curriculum learning</span><span class="chip">Reinforcement learning</span><a class="chip" href="https://github.com/WuKe29/CDS524-assignment1">Repository</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="chips">
+      <span class="chip">Python</span><span class="chip">LangGraph</span><span class="chip">LangChain</span>
+      <span class="chip">MCP (client + server)</span><span class="chip">Agent safety</span><span class="chip">LLM evaluation</span>
+      <span class="chip">SQL (CTEs, window functions)</span><span class="chip">pandas / NumPy / SciPy</span>
+      <span class="chip">PyTorch</span><span class="chip">scikit-learn</span><span class="chip">SHAP</span>
+      <span class="chip">FastAPI</span><span class="chip">Docker</span><span class="chip">Git / GitHub</span>
+      <span class="chip">JavaScript (Chrome MV3)</span><span class="chip">Claude Code / Cursor / Codex</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="card">
+      <h3>SF Technology (SF Express Group) — AI Centre, Product Department</h3>
+      <div class="meta">Product Manager Intern · Jun 2026 – Sep 2026 · Shenzhen</div>
+      <ul>
+        <li>Owned the requirements definition and user guide for an AGV call-button unit in the Centre's logistics-robotics line, translating operational needs into documentation used by frontline staff.</li>
+        <li>Supported on-site deployment and testing: site surveys, on-site test runs, and findings fed back into the requirements.</li>
+        <li>Built a Chrome extension (Manifest V3) that exports structured data from cloud web pages, replacing a manual copy-paste workflow.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="two">
+      <div class="card">
+        <h3>Lingnan University, Hong Kong</h3>
+        <div class="meta">MSc Artificial Intelligence &amp; Business Analytics · 2025 – 2026</div>
+        <p style="margin:0;color:#c7d3e1;font-size:14.5px">Distinction · CGPA 3.57 / 4.0</p>
+      </div>
+      <div class="card">
+        <h3>Central South University of Forestry and Technology</h3>
+        <div class="meta">BEng Computer Science and Technology · 2020 – 2024</div>
+        <p style="margin:0;color:#c7d3e1;font-size:14.5px">Changsha, China</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="links" style="margin-bottom:10px">
+      <a href="mailto:kewu2@ln.hk">kewu2@ln.hk</a>
+      <a href="https://github.com/WuKe29">github.com/WuKe29</a>
+      <a href="https://www.linkedin.com/in/wu-ke-451a01404/">LinkedIn</a>
+    </div>
+    <div>© <span id="y">2026</span> Fitz Wu (WU Ke)</div>
+  </footer>
+</div>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
